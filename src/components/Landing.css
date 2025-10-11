@@ -1,0 +1,172 @@
+.hero-section {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f8faff, #eef4ff);
+  color: #111;
+  padding: 80px 10%;
+  font-family: "Inter", sans-serif;
+}
+
+/* Gradient Blobs */
+.blob {
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.5;
+  z-index: 0;
+  transition: transform 0.2s ease-out;
+}
+.blob-1 {
+  background: #007bff;
+  top: 10%;
+  left: 5%;
+}
+.blob-2 {
+  background: #00c2ff;
+  bottom: 10%;
+  right: 10%;
+}
+.blob-3 {
+  background: #9b5cff;
+  bottom: 20%;
+  left: 40%;
+}
+
+/* Layout */
+.hero-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 3rem;
+  z-index: 1;
+  position: relative;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 300px;
+  z-index: 2;
+}
+
+.hero-text h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.highlight {
+  color: #007bff;
+}
+
+.typewriter {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #333;
+  min-height: 35px;
+  margin-bottom: 1rem;
+}
+
+.lead {
+  font-size: 1.05rem;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 1.8rem;
+  max-width: 480px;
+}
+
+/* Buttons */
+.cta {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  background: #007bff;
+  color: #fff;
+  padding: 0.8rem 1.6rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+.btn:hover {
+  background: #0064d2;
+}
+
+.btn-outline {
+  border: 2px solid #007bff;
+  color: #007bff;
+  background: transparent;
+}
+.btn-outline:hover {
+  background: #007bff;
+  color: #fff;
+}
+
+/* Profile */
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.profile-wrap {
+  position: relative;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0, 123, 255, 0.2);
+}
+.profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Scroll Arrow */
+.scroll-down {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-decoration: none;
+}
+.arrow {
+  width: 24px;
+  height: 24px;
+  border-left: 2px solid #007bff;
+  border-bottom: 2px solid #007bff;
+  transform: rotate(-45deg);
+  animation: bounce 1.5s infinite;
+}
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0) rotate(-45deg);
+  }
+  50% {
+    transform: translateY(10px) rotate(-45deg);
+  }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .hero-inner {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .hero-text h1 {
+    font-size: 2.2rem;
+  }
+  .profile-wrap {
+    width: 220px;
+    height: 220px;
+  }
+}

@@ -1,0 +1,203 @@
+.experience-section {
+  padding: 100px 10%;
+  position: relative;
+  overflow: hidden;
+ 
+  background:#0f172a; text-align:center;
+}
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 60px;
+  font-weight: 600;
+  color: #00ff80;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Timeline Layout */
+.timeline-container {
+  position: relative;
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  
+}
+
+/* Static line (background) */
+.timeline-container::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: rgba(0, 255, 128, 0.15);
+  transform: translateX(-50%);
+  border-radius: 10px;
+}
+
+/* Animated fill line */
+.timeline-fill {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 3px;
+  background: linear-gradient(to bottom, #00ff80, #009e5f);
+  transform: translateX(-50%);
+  border-radius: 10px;
+  z-index: 1;
+}
+
+.timeline-item {
+  position: relative;
+  width: 50%;
+}
+
+.timeline-item.left {
+  align-self: flex-start;
+  text-align: right;
+  padding-right: 40px;
+}
+
+.timeline-item.right {
+  align-self: flex-end;
+  text-align: left;
+  padding-left: 40px;
+}
+
+/* Glowing Dot */
+.timeline-dot {
+  position: absolute;
+  top: 90px;
+  width: 18px;
+  height: 18px;
+  background: #00ff80;
+  border-radius: 50%;
+  box-shadow: 0 0 12px #00ff80, 0 0 25px rgba(0, 255, 128, 0.5);
+  animation: pulse 1.8s infinite ease-in-out;
+  z-index: 5;
+}
+
+.timeline-item.left .timeline-dot {
+  right: -9px;
+}
+
+.timeline-item.right .timeline-dot {
+  left: -9px;
+}
+
+/* Card Styling */
+.content-box {
+  position: relative;
+  background: rgba(255, 255, 255, 0.07);
+  padding: 25px;
+  border-radius: 16px;
+  backdrop-filter: blur(12px);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  perspective: 1000px;
+  overflow: hidden;
+}
+
+/* Glass reflection overlay */
+.glass-reflection {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.3), transparent);
+  transform: skewX(-25deg);
+  animation: shine 5s infinite linear;
+}
+
+@keyframes shine {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 200%;
+  }
+}
+
+.content-box:hover {
+  transform: scale(1.03);
+}
+
+.content-box h3 {
+  font-size: 1.5rem;
+  color: #00ff80;
+}
+
+.content-box h4 {
+  font-size: 1.2rem;
+  color: #e0e0e0;
+  margin-bottom: 6px;
+}
+
+.period {
+  font-size: 0.95rem;
+  color: #aaa;
+  margin-bottom: 10px;
+}
+
+.desc {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 15px;
+}
+
+/* Progress Bar */
+.progress-bar {
+  height: 6px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #00ff80, #00c48c);
+  border-radius: 8px;
+}
+
+/* Animations */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 8px #00ff80, 0 0 20px rgba(0, 255, 128, 0.4);
+  }
+  50% {
+    transform: scale(1.2);
+    box-shadow: 0 0 18px #00ff80, 0 0 35px rgba(0, 255, 128, 0.7);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 8px #00ff80, 0 0 20px rgba(0, 255, 128, 0.4);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .timeline-item {
+    width: 100%;
+    text-align: left;
+    padding: 0 !important;
+  }
+
+  .timeline-container::before,
+  .timeline-fill {
+    left: 8px;
+    transform: none;
+  }
+
+  .timeline-dot {
+    left: 0 !important;
+  }
+
+  .content-box {
+    margin-left: 30px;
+  }
+}

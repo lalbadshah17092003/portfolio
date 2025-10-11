@@ -1,0 +1,6 @@
+This favicon was generated using the following font:
+
+- Font Title: Noto Serif Telugu
+- Font Author: undefined
+- Font Source: https://fonts.gstatic.com/s/notoseriftelugu/v28/tDbl2pCbnkEKmXNVmt2M1q6f4HWbbj6MRbYEeav7Fe9D9TCwuY2fjgrZYA.ttf
+- Font License: undefined)

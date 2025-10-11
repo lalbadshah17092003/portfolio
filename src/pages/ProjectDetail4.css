@@ -1,0 +1,46 @@
+/* Reuse from ProjectDetailGatepass.css with minor adjustments */
+.project-detail-page {
+  padding: 3rem 2rem;
+  max-width: 1200px;
+  margin: auto;
+  font-family: "Poppins", sans-serif;
+  color: #ffffff;
+}
+
+h1, h2, h3 { font-weight: 600; }
+
+h1 { font-size: 2.8rem; margin-bottom: 1rem; }
+h2 { font-size: 2rem; margin-bottom: 1.5rem; }
+h3 { font-size: 1.3rem; }
+
+.project-hero { text-align: center; margin-bottom: 3rem; }
+.short-desc { font-size: 1.1rem; color: #b0b0b0; margin-bottom: 1.5rem; line-height: 1.6; }
+
+.tech-badges { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.8rem; }
+.tech-badges .badge { background: rgba(0, 255, 163, 0.1); color: #00ffa3; padding: 0.4rem 0.9rem; border-radius: 50px; font-size: 0.9rem; font-weight: 500; }
+
+.project-features { margin-bottom: 3rem; }
+.features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+
+.feature-card { background: rgba(0, 255, 163, 0.05); border-left: 4px solid #00ffa3; padding: 1.5rem; border-radius: 12px; transition: all 0.3s ease; }
+.feature-card h3 { margin-bottom: 0.8rem; font-size: 1.2rem; }
+.feature-card p { opacity: 0.85; line-height: 1.5; }
+.feature-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0, 255, 163, 0.2); }
+
+.project-challenges { margin-bottom: 3rem; }
+.project-challenges p { line-height: 1.7; opacity: 0.85; background: rgba(255,255,255,0.05); padding: 1.5rem; border-radius: 12px; }
+
+.project-links { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 3rem; justify-content: center; }
+.project-links .btn, .project-links .btn-outline, .project-links .btn-back { padding: 0.7rem 1.5rem; border-radius: 50px; font-weight: 500; text-decoration: none; transition: all 0.3s ease; }
+.btn { background: #00ffa3; color: #000; }
+.btn:hover { background: #00cc85; }
+.btn-outline { border: 2px solid #00ffa3; color: #00ffa3; background: transparent; }
+.btn-outline:hover { background: #00ffa3; color: #000; }
+.btn-back { color: #b0b0b0; }
+.btn-back:hover { color: #00ffa3; }
+
+@media (max-width: 768px) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.6rem; }
+  .features-grid { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+}
